@@ -11,6 +11,14 @@ Workasana is a task management and team collaboration tool where users can creat
 
 ---
 
+
+## Login
+> **Guest**
+> Username: `john.doe@example.com`
+> Password: `securePassword123`
+
+
+
 ## Quick Start
 ```
 git clone https://github.com/mohdrafi854/Workasana-frontend.git
