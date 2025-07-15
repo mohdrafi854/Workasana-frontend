@@ -13,8 +13,8 @@ Workasana is a task management and team collaboration tool where users can creat
 
 
 ## Login
-> **Guest**
-> Username: `john.doe@example.com`
+> **Guest** <br>
+> Username: `john.doe@example.com` <br>
 > Password: `securePassword123`
 ----
 
