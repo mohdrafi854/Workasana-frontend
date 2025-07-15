@@ -41,90 +41,87 @@ npm run dev  # or `npm run start` / `yarn dev`
 Watch a walkthrough (5–7 minutes) of all major features of this app: [Loom Video Link]()
 
 ## Features
-**Home**
-- Display product categories
+**Dashboard**
+- Display projects list
+- Display tasks list
+- New Projects button onclick show the modal and create project
+- New Tasks button onClick show the modal and create tasks
 
-**Lisitng Page**
-- Display all the Products
-- Product search by name
-- Filter by categories
-- Filter product by rating
-- Sort product by price 
-- Click wishlist icon and add item
-- Click on Add to cart cart to add item
+**Project Page**
+- Display all the project
 
-**Detail Page**
-- View full information
+**Team Page**
+- Display all the team
 
-**Wishlist Page**
-- Show all wishlist items
+**Reports Page**
+- Under progress
 
-**AddToCart Page**
-- Show all add to cart items
+**Setting Page**
+- Under progress
 
 ## API Refrence
 
-### **GET /leads**<br>
-Display all leads<br>
+### **GET /projects**<br>
+Display all projects<br>
 Sample Response:<br>
 ```
-[{_id, name, source, salesAgent, status, tags, timeToClose, priority}, ....]
+[{_id, name, description}, ....]
 ```
 
-### **GET /agents**<br>
-Display all agentst<br>
+### **GET /tasks**<br>
+Display all tasks<br>
 Sample Response:<br>
 ```
-[{_id, name, email}, ....]
+[{_id, name, project, team, owners, tags, timeToComplete, status}, ....]
 ```
 
-### **GET /leads/:id/comments**<br>
-View comment<br>
+### **GET /tasks**<br>
+Display all tasks<br>
 Sample Response:<br>
 ```
-[{_id, lead, author, commentText}, ....]
+[{_id, name, project, team, owners, tags, timeToComplete, status}, ....]
 ```
 
-### **GET /report/last-week**<br>
-Display report last week<br>
+### **GET /teams**<br>
+Display all teams<br>
 Sample Response:<br>
 ```
-[{_id, status}, ....]
+[{_id, name, description, members}, ....]
 ```
 
-### **GET /report/pipeline**<br>
-Display all leads which has status closed<br>
+### **POST /project**<br>
+Create new project<br>
 Sample Response:<br>
 ```
-[{_id, status}, ....]
+[{_id, name, description}, ....]
 ```
 
-### **POST /leads**<br>
-Create new lead<br>
+### **POST /tasks**<br>
+Create new task<br>
 Sample Response:<br>
 ```
-[{_id, name, source, status, tags, timeToClose, priority}, ....]
+[{_id, name, project, team, owners, tags, timeToComplete, status}, ....]
 ```
 
-### **PATCH /leads/:id**<br>
-Update leads by lead id<br>
+### **PATCH /tasks/:id**<br>
+Update tasks by id<br>
 Sample Response:<br>
 ```
-[{_id, name, source, status, tags, timeToClose, priority}, ....]
+[{_id, name, project, team, owners, tags, timeToComplete, status}, ....]
 ```
 
-### **DELETE /leads/:id**<br>
-Delete leads by lead id<br>
+### **DELETE /tasks/:id**<br>
+Delete tasks by id<br>
 Sample Response:<br>
 ```
 [{_id}, ....]
 ```
 
-### **POST /agents**<br>
+### **POST /teams**<br>
 Create new agent<br>
 Sample Response:<br>
 ```
-[{_id, name, email}, ....]
+[{_id, name, description, members}, ....]
 ```
 ---
 
